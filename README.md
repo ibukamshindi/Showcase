@@ -1,4 +1,4 @@
-# Showcase 
+# Awwards_Clone 
 ### An application that allows users get feedback from peers on projects, Version 1.0.0.
 ### By [Ibuka Mshindi](https://github.com/ibukamshindi)
 ## Description
