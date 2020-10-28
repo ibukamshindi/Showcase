@@ -22,4 +22,7 @@ from showcase import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include('showcase.urls')),
+    url(r'^logout/$', views.logout, {"next_page": '/'}),
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
+    url(r'^search/$', views.search, name='search'),
 ]
