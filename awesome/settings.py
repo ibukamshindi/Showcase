@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'showcase',
     'bootstrap3',
     'crispy_forms',
+    'star_ratings',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
