@@ -25,7 +25,7 @@ SECRET_KEY = 'z4p41_ozxcls0f3ch_=1v_+mex^g^0wde=1zjea=&%xirt1itt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shoocase.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
