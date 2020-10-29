@@ -11,6 +11,12 @@ class Image(models.Model):
     def __str__(self):
         return self.description
 
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+          self.delete()        
+
 
 class Projects(models.Model):
     project_name = models.CharField(max_length=50, blank=True)
