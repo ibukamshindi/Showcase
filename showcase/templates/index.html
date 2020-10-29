@@ -23,7 +23,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;}
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-indigo w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
     <div class="w3-container">
         <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
            title="close menu">
@@ -75,7 +75,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;}
         {%for project in all_projects%}
         <div class="w3-third w3-container w3-margin-bottom ">
             <a href="{%url 'project' project_id=project.id%}"><img src="{{project.project_photo.url}}"
-                 alt="project_photo" style="width:100%" class="w3-hover-opacity" title="Click to view more details"></a>
+                 alt="project_photo" style="width:100%" height="400vh" class="w3-hover-opacity" title="Click to view more details"></a>
             <div class="w3-container w3-white w3-card">
                 <p><b>{{project.project_name}}</b></p>
                 <p>{{project.description}}</p>

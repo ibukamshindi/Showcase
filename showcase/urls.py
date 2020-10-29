@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.conf.urls import url,include
 from django.conf import settings
+from .views import ListProfileView, ListProjectView
 
 
 urlpatterns=[
@@ -14,7 +15,8 @@ urlpatterns=[
     url(r'profile/',views.profile, name='profile'),
     url(r'^post/', views.upload_form, name='post'),
     url(r'^edit/', views.edit_prof, name='edit'),
-
+    url('api/profile/', ListProfileView.as_view(), name="profile-all"),
+    url('api/project/', ListProjectView.as_view(), name="project-all")
 ]
 
 if settings.DEBUG:
