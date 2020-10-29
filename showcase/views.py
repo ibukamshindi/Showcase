@@ -4,6 +4,9 @@ from django.contrib.auth.views import logout
 from django.contrib.auth.decorators import login_required
 from .forms import *
 from django.http import Http404
+from rest_framework import generics
+from .serializer import ProfileSerializer, ProjectSerializer
+
 
 # Create your views here.
 def register(request):
@@ -44,6 +47,11 @@ def profile(request):
         my_profile = Profile.objects.get(user_id=current_user)
     return render(request, 'profile.html', locals())
 
+class ListProfileView(generics.ListAPIView):
+ 
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
 @login_required(login_url='/accounts/login')
 def upload_form(request):
     current_user = request.user
@@ -80,6 +88,11 @@ def search(request):
     parameter = request.GET.get("project")
     result = Projects.objects.filter(project_name__icontains=parameter)
     return render(request, 'search.html', locals())
+
+class ListProjectView(generics.ListAPIView):
+
+    queryset = Projects.objects.all()
+    serializer_class = ProjectSerializer
 
 
 @login_required(login_url='/accounts/login')
